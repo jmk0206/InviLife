@@ -1,5 +1,7 @@
 package com.invi.controller;
 
+
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
 import com.invi.domain.BoardVO;
+import com.invi.domain.Criteria;
+import com.invi.domain.PageDTO;
 import com.invi.service.BoardService;
 
 @Controller
@@ -39,9 +42,13 @@ public class BoardController {
 	
 	// list(글목록)
 	@GetMapping("list")
-	public void list(Model model) {
+	public void list(Model model, Criteria cri) {
 		logger.info("list");
+		
+		int count = service.getTotalCount(cri);
 		model.addAttribute("list", service.getList());	
+//		model.addAttribute("list", service.getListWidthPaing(cri));
+		model.addAttribute("pageMaker", new PageDTO(cri,count));
 	}
 	
 	// get(글 상세페이지)

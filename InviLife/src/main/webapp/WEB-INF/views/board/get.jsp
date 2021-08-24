@@ -3,6 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- jquery 연결 -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- 댓글처리하기 위한 javascript(reply.js) 파일 연결 -->
+<script src="../resources/js/reply.js"></script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
@@ -39,5 +44,17 @@
 
 		</table>
 	</form>
+	
+	<!-- 목록 리스트 뿌리기 -->
+	<div>
+		<ul id="replyList">
+	
+		</ul>
+	</div>
+	
+	<div>
+		<textarea rows="3" cols="30" id="reply"></textarea>
+		<button id="replyadd">댓글</button>
+	</div>
 </body>
 </html>

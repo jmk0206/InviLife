@@ -13,7 +13,16 @@ public class BoardVO {
 	private String regdate;
 	// 수정일자
 	private String updatedate;
-	
+	// 댓글 건수
+	private int replycnt;
+	// 첨부파일과 관련이 있는 BoardAttachVO를 클래스를 포함하여 BoardVO를 insert할 때 같이 데이터를 가져가자.
+
+	public int getReplycnt() {
+		return replycnt;
+	}
+	public void setReplycnt(int replycnt) {
+		this.replycnt = replycnt;
+	}
 	public int getBno() {
 		return bno;
 	}
@@ -54,7 +63,7 @@ public class BoardVO {
 	@Override
 	public String toString() {
 		return "BoardVO [bno=" + bno + ", title=" + title + ", content=" + content + ", writer=" + writer + ", regdate="
-				+ regdate + ", updatedate=" + updatedate + "]";
+				+ regdate + ", updatedate=" + updatedate + ", replycnt=" + replycnt + "]";
 	}
 	
 	
