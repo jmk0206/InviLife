@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.invi.domain.ReplyVO;
-import com.invi.mapper.BoardMapper;
 import com.invi.mapper.ReplyMapper;
 
 // 구현 메서드
@@ -20,8 +19,6 @@ public class ReplyServiceImpl implements ReplyService {
 	@Autowired
 	private ReplyMapper rmapper;
 	
-	@Autowired
-	private BoardMapper bmapper;
 
 	// 댓글 쓰기
 	@Transactional
@@ -38,11 +35,12 @@ public class ReplyServiceImpl implements ReplyService {
 
 	// 댓글 수정
 	public int modify(ReplyVO vo) {
-		return 0;
+		logger.info("service modify" + vo);
+		return rmapper.update(vo);
 	}
 
 	// 댓글 삭제
 	public int remove(int rno) {
-		return 0;
+		return rmapper.delete(rno);
 	}
 }

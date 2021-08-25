@@ -45,18 +45,6 @@
 		</tr>
 	</table>
 	
-		<div class="pull-right">
-			<ul class="pagination">
-				<c:if test="${pageMaker.prev}">
-					<li class="paginate_button previous"><a href="list?pageNum=${pageMaker.startPage-1}&amount=${pageMaker.cri.amount}">Previous</a></li>
-				</c:if>
-							
-				<c:if test="${pageMaker.next}">
-					<li class="paginate_button next"><a href="list?pageNum=${pageMaker.endPage+1}&amount=${pageMaker.cri.amount}">Next</a></li>
-				</c:if>
-			</ul>
-		</div>
-	
 	<div>
 		<form action="list" method="get">
 			<!-- 페이징이 깨지기 때문에 아래의 input태그를 사용하며 hidden을 한다. -->

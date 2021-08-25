@@ -16,7 +16,7 @@
 		<table border="1">
 			<tr>
 				<td>번호</td>
-				<td>${board.bno }<input type="hidden" name="bno" value="${board.bno}"></td>
+				<td>${board.bno }<input type="hidden" id="bno" name="bno" value="${board.bno}"></td>
 			</tr>
 			
 			<tr>

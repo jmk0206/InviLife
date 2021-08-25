@@ -5,33 +5,48 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="../resources/css/register.css" rel="stylesheet">
 </head>
 <body>
-	<form action="register" method="post">
-		<table border="1">
-			<tr>
-				<td>제목</td>
-				<td><input type="text" name="title"></td>
-			</tr>
-			
-			<tr>
-				<td>내용</td>
-				<td><textarea cols="20" rows="10" name="content"></textarea></td>
-			</tr>
-			
-			<tr>
-				<td>작성자</td>
-				<td><input type="text" name="writer"></td>
-			</tr>
-			
-			<tr>
-				<td colspan="2">
+	<div id="wrap">
+		<div class="container">
+			<div class="head">
+				<h1>고객의 소리</h1>
+				<p>고객의 목소리를 귀 기울여 들어 최고의 서비스를 제공하겠습니다.</p>
+			</div> <!-- .head -->
+
+			<form action="register" method="post">
+				<div class="title box">
+					<label>
+						<span class="boxTitle">제목</span>
+						<span class="inputBorder">
+							<input type="text" class="inputBox" name="title">
+						</span>
+					</label>
+				</div> <!-- .title -->
+				
+				<div class="contents box">
+					<label for="content">
+						<p class="boxTitle">내용</p>
+					</label>
+						<textarea name="content" id="content" class="c_textarea" rows="13" cols="100"></textarea>
+				</div> <!-- .contents -->
+
+				<div class="writer box">
+					<label>
+						<span class="boxTitle">작성자</span>						
+						<span class="inputBorder writerBorder">
+							<input type="text" name="writer">
+						</span>
+					</label>
+				</div> <!-- .writer -->
+
+				<div class="goList">
 					<input type="submit" value="글쓰기">
 					<button type="button" onClick="location.href='list'">취소</button>
-				</td>
-
-			</tr>
-		</table>
-	</form>
+				</div> <!-- .goList -->
+			</form>
+		</div> <!-- .container -->
+	</div> <!-- #wrap -->
 </body>
 </html>
