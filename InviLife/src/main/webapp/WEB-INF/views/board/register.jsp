@@ -27,7 +27,7 @@
 				
 				<div class="contents box">
 					<label for="content">
-						<p class="boxTitle">내용</p>
+						<span class="boxTitle">내용</span>
 					</label>
 						<textarea name="content" id="content" class="c_textarea" rows="13" cols="100"></textarea>
 				</div> <!-- .contents -->
@@ -42,8 +42,10 @@
 				</div> <!-- .writer -->
 
 				<div class="goList">
-					<input type="submit" value="글쓰기">
-					<button type="button" onClick="location.href='list'">취소</button>
+					<ul>
+						<li><input type="submit" value="글쓰기" class="send"></li>
+						<li><button type="button" onClick="location.href='list'" class="cancel">취소</button></li>
+					</ul>
 				</div> <!-- .goList -->
 			</form>
 		</div> <!-- .container -->
