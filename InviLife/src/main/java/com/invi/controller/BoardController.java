@@ -58,12 +58,14 @@ public class BoardController {
 		model.addAttribute("board", service.get(bno));
 	}
 	
+	// modify(수정 페이지)
 	@GetMapping("modify")
 	public void modify(@RequestParam("bno") int bno, Model model) {
 		logger.info("get...");
 		model.addAttribute("board", service.get(bno));
 	}
 	
+	// modify(수정 적용)
 	@PostMapping("modify")
 	public String modifyPost(BoardVO board, RedirectAttributes rttr) {
 		logger.info("modify...");
@@ -74,6 +76,7 @@ public class BoardController {
 		return "redirect:/board/get";
 	}
 	
+	// remove(삭제)
 	@PostMapping("remove")
 	public String remove(@RequestParam("bno") int bno) {
 		logger.info("remove....");

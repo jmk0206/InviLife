@@ -16,7 +16,7 @@
 	<!-- Custom styles for this page -->
 	<link href="../resources/css/dataTables.bootstrap4.css" rel="stylesheet">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>List</title>
 </head>
 <body>
 	<table class="table table-bordered" id="dataTable">
@@ -44,18 +44,6 @@
 			</td>
 		</tr>
 	</table>
-	
-		<div class="pull-right">
-			<ul class="pagination">
-				<c:if test="${pageMaker.prev}">
-					<li class="paginate_button previous"><a href="list?pageNum=${pageMaker.startPage-1}&amount=${pageMaker.cri.amount}">Previous</a></li>
-				</c:if>
-							
-				<c:if test="${pageMaker.next}">
-					<li class="paginate_button next"><a href="list?pageNum=${pageMaker.endPage+1}&amount=${pageMaker.cri.amount}">Next</a></li>
-				</c:if>
-			</ul>
-		</div>
 	
 	<div>
 		<form action="list" method="get">
