@@ -16,7 +16,7 @@
 	<!-- Custom styles for this page -->
 	<link href="../resources/css/dataTables.bootstrap4.css" rel="stylesheet">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>List</title>
 </head>
 <body>
 	<table class="table table-bordered" id="dataTable">
