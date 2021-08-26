@@ -8,53 +8,55 @@
 
 <!-- 댓글처리하기 위한 javascript(reply.js) 파일 연결 -->
 <script src="../resources/js/reply.js"></script>
+<link rel="stylesheet" href="../resources/css/get.css">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-	<form method="post">
-		<table border="1">
-			<tr>
-				<td>번호</td>
-				<td>${board.bno }<input type="hidden" id="bno" name="bno" value="${board.bno}"></td>
-			</tr>
+	<div id="wrap">
+		<div class="container">
+			<form method="post">
+				<div class="number box">
+					<span class="boxTitle">글 번호</span>
+					<span class="gNumber">${board.bno }<input type="hidden" id="bno" name="bno" value="${board.bno}"></span>
+				</div>
+				
+				<div class="title box">
+					<span class="boxTitle">제목</span>
+					<h2>${board.title}</h2>
+				</div>
+				
+				<div class="contents box">
+					<span class="boxTitle">내용</span>
+					<textarea rows="30" cols="100" class="c_textarea" name="content" readonly>${board.content }</textarea>
+				</div>
+				
+				<div class="writer box">
+					<span class="boxTitle">작성자</span>
+					<span class="gWriter">${board.writer }</span>
+				</div>
+				
+				<div class="goOther">
+					<ul>
+						<li><button type="button" onClick="location.href='modify?bno=${board.bno }'">수정</button></li>
+						<li><input type="submit" value="삭제" formaction="remove"></li>
+						<li><button type="button" onClick="location.href='list'">목록</button></li>
+					</ul>
+				</div>
+			</form>
 			
-			<tr>
-				<td>제목</td>
-				<td>${board.title}</td>
-			</tr>
+			<!-- 목록 리스트 뿌리기 -->
+			<div>
+				<ul id="replyList">
 			
-			<tr>
-				<td>내용</td>
-				<td><textarea rows="3" cols="30" name="content" readonly>${board.content }</textarea></td>
-			</tr>
+				</ul>
+			</div>
 			
-			<tr>
-				<td>작성자</td>
-				<td>${board.writer }</td>
-			</tr>
-			
-			<tr>
-				<td colspan="2">
-					<button type="button" onClick="location.href='modify?bno=${board.bno }'">수정</button>
-					<input type="submit" value="삭제" formaction="remove">
-					<button type="button" onClick="location.href='list'">목록</button>
-				</td>
-			</tr>
-
-		</table>
-	</form>
-	
-	<!-- 목록 리스트 뿌리기 -->
-	<div>
-		<ul id="replyList">
-	
-		</ul>
-	</div>
-	
-	<div>
-		<textarea rows="3" cols="30" id="reply"></textarea>
-		<button id="replyadd">댓글</button>
-	</div>
+			<div>
+				<textarea rows="3" cols="30" id="reply"></textarea>
+				<button id="replyadd">댓글</button>
+			</div>
+		</div> <!-- .container -->
+	</div> <!-- #wrap -->
 </body>
 </html>

@@ -34,7 +34,7 @@ $(document).ready(function() {
 		
 		// replyService.add({reply:"aaa", replyer:"bbb", bno:2},function(result){alert("cccc");}
 		replyService.add(
-				{reply:reply, replyer:"bbb", bno:bno},
+				{reply:reply, replyer:"작성자", bno:bno},
 				function(result){ // insert가 정상적으로 처리된 후 작업(callback)
 					alert("결과는  : " + result);
 					showList();
