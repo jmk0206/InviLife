@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Register</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link href="../resources/css/register.css" rel="stylesheet">
 </head>
 <body>
@@ -29,14 +30,16 @@
 					<label for="content">
 						<span class="boxTitle">내용</span>
 					</label>
+					<span>
 						<textarea name="content" id="content" class="c_textarea" rows="13" cols="100"></textarea>
+					</span>
 				</div> <!-- .contents -->
 
 				<div class="writer box">
 					<label>
 						<span class="boxTitle">작성자</span>						
 						<span class="inputBorder writerBorder">
-							<input type="text" name="writer">
+							<input type="text" class="inputBox" name="writer">
 						</span>
 					</label>
 				</div> <!-- .writer -->
@@ -50,5 +53,6 @@
 			</form>
 		</div> <!-- .container -->
 	</div> <!-- #wrap -->
+	<script src="../resources/js/register.js"></script>
 </body>
 </html>
