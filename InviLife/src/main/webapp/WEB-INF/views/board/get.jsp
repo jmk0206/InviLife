@@ -15,47 +15,53 @@
 <body>
 	<div id="wrap">
 		<div class="container">
-			<form method="post">
-				<div class="number box">
-					<span class="boxTitle">글 번호</span>
-					<span class="gNumber">${board.bno }<input type="hidden" id="bno" name="bno" value="${board.bno}"></span>
+			<div class="formBoard">
+				<form method="post">
+					<div class="number box">
+						<span class="boxTitle">글 번호</span>
+						<span class="gNumber">${board.bno }<input type="hidden" id="bno" name="bno" value="${board.bno}"></span>
+					</div>
+					
+					<div class="title box">
+						<span class="boxTitle">제목</span>
+						<h2>${board.title}</h2>
+					</div>
+					
+					<div class="contents box">
+						<span class="boxTitle">내용</span>
+						<textarea rows="30" cols="100" class="c_textarea" name="content" readonly>${board.content }</textarea>
+					</div>
+					
+					<div class="writer box">
+						<span class="boxTitle">작성자</span>
+						<span class="gWriter">${board.writer }</span>
+					</div>
+					
+					<div class="goOther">
+						<ul>
+							<li><button type="button" onClick="location.href='modify?bno=${board.bno }'">수정</button></li>
+							<li><input type="submit" value="삭제" formaction="remove"></li>
+							<li><button type="button" onClick="location.href='list'">목록</button></li>
+						</ul>
+					</div>
+				</form>
+			</div> <!-- .formBoard -->
+					
+			<!-- 목록 리스트 뿌리기 -->
+			<div id="wrapReplyList">
+				<div class="replyUpdate">
+					<ul id="replyList">
+				
+					</ul> <!-- replyList -->
 				</div>
 				
-				<div class="title box">
-					<span class="boxTitle">제목</span>
-					<h2>${board.title}</h2>
-				</div>
-				
-				<div class="contents box">
-					<span class="boxTitle">내용</span>
-					<textarea rows="30" cols="100" class="c_textarea" name="content" readonly>${board.content }</textarea>
-				</div>
-				
-				<div class="writer box">
-					<span class="boxTitle">작성자</span>
-					<span class="gWriter">${board.writer }</span>
-				</div>
-				
-				<div class="goOther">
+				<div class="replyInsert">
 					<ul>
-						<li><button type="button" onClick="location.href='modify?bno=${board.bno }'">수정</button></li>
-						<li><input type="submit" value="삭제" formaction="remove"></li>
-						<li><button type="button" onClick="location.href='list'">목록</button></li>
+						<li><textarea rows="6" cols="120" id="reply"></textarea></li>
+						<li><button id="replyadd">댓글 작성</button></li>
 					</ul>
 				</div>
-			</form>
-			
-			<!-- 목록 리스트 뿌리기 -->
-			<div>
-				<ul id="replyList">
-			
-				</ul>
-			</div>
-			
-			<div>
-				<textarea rows="3" cols="30" id="reply"></textarea>
-				<button id="replyadd">댓글</button>
-			</div>
+			</div> <!-- #wrapReplyList -->
 		</div> <!-- .container -->
 	</div> <!-- #wrap -->
 </body>

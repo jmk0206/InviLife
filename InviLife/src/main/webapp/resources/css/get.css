@@ -29,6 +29,7 @@ a {
     text-decoration: 0;
 }
 
+/* 게시물 */
 #wrap {
     position: relative;
     width: 100%;
@@ -125,3 +126,48 @@ a {
 	background-color: #704810;
 	border-radius: 10px;
 }
+
+
+/* 댓글 css */
+#wrapReplyList {
+    padding-left: 20px;
+}
+
+.gReplyer {
+    margin-bottom: 10px;
+}
+
+#wrapReplyList textarea {
+    margin-bottom: 10px;
+}
+
+.contentReplyList {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+}
+
+#wrapReplyList button, #wrapReplyList input {
+	border: none;
+	background: #fff;
+	cursor: pointer;
+	color: #555;
+}
+
+#wrapReplyList button:hover, #wrapReplyList input:hover {
+	color: #222;
+}
+
+#wrapReplyList textarea {
+	outline: none;
+	resize: none;
+	font-size: 13px;
+}
+
+.replymod {
+	margin-right: 15px;
+}
+
+
+
+

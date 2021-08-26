@@ -15,10 +15,10 @@ $(document).ready(function() {
 				function(list){
 					var str="";
 					for(var i=0; i<list.length; i++) {
-						str+="<li>"+list[i].replyer+"</li>"; // str=str+"<li>"+list[i].replyer+"</li>
-						str+="<li><textarea rows='3' cols='30' id='modreply"+list[i].rno+"'>"+list[i].reply+"</textarea></li>"; // str=str+"<li>"+list[i].reply+"</li>
-						str+="<li>"+list[i].replydate+"</li>"; // str=str+"<li>"+list[i].replydate+"</li>
-						str+="<li><button class='replymod' id='replymod' data-rno='"+list[i].rno+"'>댓글수정</button><button class='replydel' data-rno='"+list[i].rno+"'>댓글삭제</button></li>"
+						str+="<div class='contentReplyList'><li class='gReplyer'>"+list[i].replyer+"</li>"; // str=str+"<li>"+list[i].replyer+"</li>
+						str+="<li><textarea rows='6' cols='120' id='modreply"+list[i].rno+"'>"+list[i].reply+"</textarea></li>"; // str=str+"<li>"+list[i].reply+"</li>
+						// str+="<li>"+list[i].replydate+"</li>"; // str=str+"<li>"+list[i].replydate+"</li>
+						str+="<li class='replyBtn'><button class='replymod' id='replymod' data-rno='"+list[i].rno+"'>댓글 수정</button><button class='replydel' data-rno='"+list[i].rno+"'>댓글 삭제</button></li></div>"
 					}
 					$("#replyList").html(str)
 				}
