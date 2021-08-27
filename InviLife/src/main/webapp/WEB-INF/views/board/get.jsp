@@ -10,7 +10,9 @@
 <script src="../resources/js/reply.js"></script>
 <link rel="stylesheet" href="../resources/css/get.css">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>get</title>
 </head>
 <body>
 	<div id="wrap">

@@ -64,8 +64,14 @@ a {
     text-align: center;
 }
 
+
 .title .boxTitle, .contents .boxTitle {
     display: none;
+}
+
+.title h2 {
+	font-size: 32px;
+	font-weight: 700;
 }
 
 .contents {

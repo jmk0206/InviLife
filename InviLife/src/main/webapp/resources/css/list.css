@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/* 브라우저 초기화 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    color: #222;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+    border: 0;
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: 0;
+}
