@@ -4,7 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INVICOFFEE</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -54,7 +56,7 @@
                                     <p><a href="#">가입</a></p>
                                     <p><a href="#">멤버십 혜택</a></p>
                                     <p><a href="#">선물하기</a></p>
-                                    <p><a href="#">FAQ</a></p>
+                                    <p><a href="/board/list">FAQ</a></p> <!-- board/list로 이동 -->
                                 </li> <!--.membership_intro-->
     
                                 <li class="notice_intro">
@@ -76,8 +78,8 @@
 
                     <div class="pc_util pc">
                         <ul class="pc_topBar">
-                            <li><a href="./login">로그인</a></li>
-                            <li><a href="./membership">회원가입</a></li>
+                            <li><a href="login">로그인</a></li>
+                            <li><a href="membership">회원가입</a></li>
                             <li><a href="#">고객센터</a></li>
                         </ul>
 
@@ -205,7 +207,7 @@
 
     <div id="side">
         <div class="s_login">
-            <a href="../login.html">로그인</a>
+            <a href="login">로그인</a>
         </div> <!--.s_login-->
 
         <nav class="s_gnb">

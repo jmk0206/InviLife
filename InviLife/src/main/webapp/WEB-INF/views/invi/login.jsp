@@ -4,7 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INVICOFFEE LOGIN</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -16,7 +18,7 @@
     <div id="wrap">
         <div id="header">
             <div id="headerIn">
-                <h1 id="login_logo"><a href="./main">인비라이프 로고</a></h1>
+                <h1 id="login_logo"><a href="main">인비라이프 로고</a></h1>
 
                 <div id="login_lang">
                     <select name="login_lang_in" id="login_lang_in">
@@ -48,7 +50,7 @@
                 </form> <!--#user_login-->
 
                 <ul id="search_login">
-                    <li class="member"><a href="./membership">회원가입</a></li> <!--.member-->
+                    <li class="member"><a href="membership">회원가입</a></li> <!--.member-->
                     <li class="search_id"><a href="#">아이디 찾기</a></li>
                     <li class="search_pw"><a href="#">비밀번호 찾기</a></li>
                 </ul> <!--#search_login-->

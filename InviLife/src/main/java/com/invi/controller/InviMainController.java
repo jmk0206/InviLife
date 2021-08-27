@@ -28,4 +28,9 @@ public class InviMainController {
 	public void membership() {
 		logger.info("membership");
 	}
+	
+	@GetMapping("footer")
+	public void footer() {
+		logger.info("footer");
+	}
 }

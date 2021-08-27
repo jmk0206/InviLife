@@ -52,6 +52,10 @@ input {
 
 /* 모바일 시작 */
 
+#wrap {
+	padding-top: 100px;
+}
+
 #headerIn {
     position: relative;
     width: 100%;
@@ -82,7 +86,7 @@ input {
 
 #login_lang {
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 15px;
 }
 
@@ -94,6 +98,7 @@ input {
 }
 
 #container {
+	position: relative;
     width: 100%;
     margin-bottom: 100px;
 }
@@ -113,7 +118,7 @@ input[type="text"], input[type="password"] {
     border: 1px solid #ccc;
     padding: 5px;
     font-size: 16px;
-    cursor: pointer;
+    cursor: auto;
 }
 
 #user_id {

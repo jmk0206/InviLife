@@ -92,6 +92,9 @@ input[type="text"], input[type="password"] {
     cursor: pointer;
 }
 
+#container {
+	padding-bottom: 50px;
+}
 
 #container_in {
     width: 100%;
@@ -250,6 +253,10 @@ input[type="text"], input[type="password"] {
         width: 400px;
         height: 60px;
     }
+    
+	#login_lang {
+	    top: 30px;
+	}
 
     #container {
         max-width: 768px;

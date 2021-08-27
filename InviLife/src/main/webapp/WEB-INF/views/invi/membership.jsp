@@ -4,6 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Insert title here</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -14,7 +16,7 @@
     <div id="wrap">
         <div id="header">
             <div id="headerIn">
-                <h1 id="login_logo"><a href="./main">인비라이프 로고</a></h1>
+                <h1 id="login_logo"><a href="main">인비라이프 로고</a></h1>
 
                 <div id="login_lang">
                     <select name="login_lang_in" id="login_lang_in">
