@@ -15,7 +15,6 @@ public class BoardVO {
 	private String updatedate;
 	// 댓글 건수
 	private int replycnt;
-	// 첨부파일과 관련이 있는 BoardAttachVO를 클래스를 포함하여 BoardVO를 insert할 때 같이 데이터를 가져가자.
 
 	public int getReplycnt() {
 		return replycnt;
