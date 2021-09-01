@@ -74,9 +74,10 @@ $(document).ready(function() {
 	// 이름 유효성 검사 정규식
 	var reg_name = RegExp(/^[가-힣]{2,4}$/);
     // 생년월일(year) 유효성 검사 정규식
-    var reg_year = RegExp(/([0-9]{4})/);
+    var reg_year = RegExp(/^([0-9]{4})$/);
     // 생년월일(day)
-    var reg_day = RegExp(/([0-9]{2})/);
+    var reg_day = RegExp(/^([0-9]{2})$/);
+    
 
 
 

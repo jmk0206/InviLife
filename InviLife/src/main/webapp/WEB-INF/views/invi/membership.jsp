@@ -29,7 +29,7 @@
 
         <div id="container">
             <div id="container_in">
-                <form id="join_form" method="POST" action="">
+                <form method="POST" action="membership">
                     <div class="row_group">
                         <div class="join_row">
                             <h3 class="join_title">
@@ -37,7 +37,7 @@
                             </h3> <!--.join_title-->
 
                             <div class="join_box">
-                                <input type="text" id="join_id" required autofocus>
+                                <input type="text" id="join_id" name="join_id" required autofocus>
                                 <span class="url_step">@invi.com</span> <!--.url_step-->
                             </div> <!--.join_box-->
                             <p id="checkId"></p>
@@ -48,7 +48,7 @@
                                 <label for="join_pw1">비밀번호</label>
                             </h3> <!--.join_title-->
                             <div class="join_box">
-                                <input type="password" id="join_pw1" required>
+                                <input type="password" id="join_pw1" name="join_pw1" required>
                             </div> <!--.join_box-->
                             <p id="checkPw1"></p>
 
@@ -56,7 +56,7 @@
                                 <label for="join_pw2">비밀번호 확인</label>
                             </h3> <!--.join_title-->
                             <div class="join_box">
-                                <input type="password" id="join_pw2" required>
+                                <input type="password" id="join_pw2" name="join_pw2" required>
                             </div> <!--.join_box-->
                             <p id="checkPw2"></p>
                         </div> <!--.join_row-->
@@ -67,7 +67,7 @@
                             <label for="join_name">이름</label>
                         </h3> <!--.join_title-->
                         <div class="join_box joinBox4">
-                            <input type="text" id="join_name" required>
+                            <input type="text" id="join_name" name="join_name" required>
                         </div> <!--.join_box-->
                         <p id="checkName"></p>
 
@@ -76,9 +76,9 @@
                                 <label>생년월일</label>
                             </h3> <!--.join_title-->
                             <ul id="birth_select">
-                                <li class="year"><input type="text" id="birth_year" placeholder="년(4자)" required></li> <!--.year-->
+                                <li class="year"><input type="text" id="birth_year" name="birth_year" placeholder="년(4자)" required></li> <!--.year-->
                                 <li class="month">                     
-                                    <select id="birth_month">
+                                    <select id="birth_month" name="birth_month">
                                         <option value="">월</option>
                                         <option value="01">01</option>
                                         <option value="02">02</option>
@@ -94,7 +94,7 @@
                                         <option value="12">12</option>
                                     </select>
                                 </li> <!--.month-->
-                                <li class="day"><input type="text" id="birth_day" placeholder="일" required></li> <!--.day-->
+                                <li class="day"><input type="text" id="birth_day" name="birth_day" placeholder="일" required></li> <!--.day-->
                             </ul>
                             <p id="checkBirth"></p>
 
@@ -103,7 +103,7 @@
                                     <label>성별</label>
                                 </h3> <!--.join_title-->
                                 <div class="gender_select">
-                                    <select id="gender">
+                                    <select id="gender" name="gender">
                                         <option value="">성별</option>
                                         <option value="남">남</option>
                                         <option value="여">여</option>
@@ -113,8 +113,8 @@
                             </div> <!--.join_gender-->
                             <p id="checkGender"></p>
                         </div> <!--.birth-->
-
-                        <button id="join_button">가입하기</button> <!--#join_button-->
+                        
+                        <input type="submit" id="join_button" value="가입하기">
                     </div> <!--.row_group-->
                 </form> <!--#join_form-->
             </div> <!--#container_in-->

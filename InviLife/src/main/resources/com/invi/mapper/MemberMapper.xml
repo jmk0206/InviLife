@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.invi.mapper.MemberMapper">
+
+	<insert id="insert">
+		insert into invi_member(join_id, join_pw1, join_pw2, join_name, birth_year, birth_month, birth_day, gender) 
+		values(#{join_id}, #{join_pw1}, #{join_pw2}, #{join_name}, #{birth_year}, #{birth_month}, #{birth_day}, #{gender});
+	</insert>
+
+</mapper>

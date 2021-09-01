@@ -15,34 +15,6 @@
 	</properties>
 	<dependencies>
 	
-		<!-- spring-security-taglibs -->
-		<dependency>
-		    <groupId>org.springframework.security</groupId>
-		    <artifactId>spring-security-taglibs</artifactId>
-		    <version>5.0.6.RELEASE</version>
-		</dependency>
-		
-		<!-- spring-security-core -->
-		<dependency>
-		    <groupId>org.springframework.security</groupId>
-		    <artifactId>spring-security-core</artifactId>
-		    <version>5.0.6.RELEASE</version>
-		</dependency>
-	
-		<!-- spring-security-config -->
-		<dependency>
-		    <groupId>org.springframework.security</groupId>
-		    <artifactId>spring-security-config</artifactId>
-		    <version>5.0.6.RELEASE</version>
-		</dependency>
-	
-		<!-- spring-security-web -->
-		<dependency>
-		    <groupId>org.springframework.security</groupId>
-		    <artifactId>spring-security-web</artifactId>
-		    <version>5.0.6.RELEASE</version>
-		</dependency>
-	
 		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
 		<dependency>
 		    <groupId>com.google.code.gson</groupId>
