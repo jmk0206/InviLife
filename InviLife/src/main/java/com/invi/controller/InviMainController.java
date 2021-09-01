@@ -32,7 +32,7 @@ public class InviMainController {
 		logger.info("membership");
 	}
 	
-	// 회원가입 후 로그인으로 이동
+	// 회원가입 후 로그인 페이지로 이동
 	@PostMapping("membership")
 	public String membershipPost(MemberVO member) {
 		logger.info("membershipPost");

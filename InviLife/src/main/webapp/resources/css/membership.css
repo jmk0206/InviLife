@@ -210,6 +210,7 @@ input[type="text"], input[type="password"] {
     font-size: 16px;
 }
 
+/* button에서 input으로 수정 */
 #join_button {
     width: 100%;
     height: 60px;

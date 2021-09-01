@@ -16,7 +16,7 @@ public class MemberServiceImpl implements MemberService {
 	@Autowired
 	private MemberMapper mapper;
 	
-	// 회원가입
+	// 회원가입 정보 등록
 	@Transactional
 	public void sign(MemberVO member) {
 		logger.info("sign...");

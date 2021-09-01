@@ -5,7 +5,7 @@ public class MemberVO {
 	private String join_id;
 	// pw
 	private String join_pw1;
-	// check pw
+	// check pw (위의 패쓰워드 확인)
 	private String join_pw2;
 	// name
 	private String join_name;

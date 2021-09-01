@@ -114,6 +114,7 @@
                             <p id="checkGender"></p>
                         </div> <!--.birth-->
                         
+                        <!-- button에서 input으로 수정 -->
                         <input type="submit" id="join_button" value="가입하기">
                     </div> <!--.row_group-->
                 </form> <!--#join_form-->

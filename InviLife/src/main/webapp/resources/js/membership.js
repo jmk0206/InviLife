@@ -151,7 +151,6 @@ $(document).ready(function() {
         }
     });
 
-
     // 성별 유효성 검사
     $("#gender").on("blur", function() {
         var gender=$("#gender").val();

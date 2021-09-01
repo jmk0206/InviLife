@@ -4,7 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
 <mapper namespace="com.invi.mapper.MemberMapper">
-
+	<!-- 회원가입 정보 sql에 저장 -->
 	<insert id="insert">
 		insert into invi_member(join_id, join_pw1, join_pw2, join_name, birth_year, birth_month, birth_day, gender) 
 		values(#{join_id}, #{join_pw1}, #{join_pw2}, #{join_name}, #{birth_year}, #{birth_month}, #{birth_day}, #{gender});
