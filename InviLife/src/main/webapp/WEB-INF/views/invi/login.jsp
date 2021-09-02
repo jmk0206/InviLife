@@ -31,18 +31,18 @@
 
         <div id="container">
             <div id="containerIn">
-                <form action="fromLogin" id = "fromLogin" target="_blank" method="POST">
+                <form action="login" method="post">
                     <ul id="user_login">
                         <li>
-                            <input type="text" id="user_id" class="lg_select" placeholder="아이디" required autofocus>
+                            <input type="text" id="user_id" class="lg_select" name="join_id" placeholder="아이디" required autofocus>
                         </li>
 
                         <li>
-                            <input type="password" id="user_pw" class="lg_select" placeholder="비밀번호" required>
+                            <input type="password" id="user_pw" class="lg_select" name="join_pw1" placeholder="비밀번호" required>
                         </li>
 
                         <li>
-                            <button id="login_button">로그인</button> <!--#login_button-->
+                            <input type="submit" value="로그인" id="login_button">
                         </li>
                     </ul> 
                     

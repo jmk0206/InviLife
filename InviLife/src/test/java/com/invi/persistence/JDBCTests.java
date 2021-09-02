@@ -32,7 +32,7 @@ public class JDBCTests {
 								// userName
 								"root",
 								// password
-								"1234")) {
+								"kangta0206##")) {
 			logger.info(""+con);
 		} catch(Exception e) {
 			fail(e.getMessage());

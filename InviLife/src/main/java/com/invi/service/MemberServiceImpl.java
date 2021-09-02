@@ -23,4 +23,10 @@ public class MemberServiceImpl implements MemberService {
 		mapper.insert(member);
 	}
 
+	// 로그인 처리
+	public MemberVO login(MemberVO member) {
+		logger.info("login..."+member);
+		return mapper.login(member);
+	}
+
 }

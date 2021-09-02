@@ -1,5 +1,7 @@
 package com.invi.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,6 +47,29 @@ public class InviMainController {
 	@GetMapping("login")
 	public void login() {
 		logger.info("login");
+	}
+	
+	// 로그인 Post
+	@PostMapping("login")
+	public String loginPost(MemberVO member, HttpSession session) {
+		logger.info("로그인 서비스 처리");
+		
+		MemberVO vo = mService.login(member);
+		// Member VO에 있는 MemberVO에 들어있는 정보를 세션 영역에 aaaa라는 변수에 저장
+		session.setAttribute("login", vo);
+		
+		// session영역에 aaaa라는 변수에 값이 있으면 로그인 된 채로 main으로
+		if(session.getAttribute("login") != null) {
+			return "redirect:/invi/main";
+		} else {
+			return "redirect:/invi/login";
+		}
+	}
+	
+	@PostMapping("logout")
+	public void logoutPost(HttpSession session) {
+		logger.info("로그아웃 처리");
+		session.removeAttribute("login");
 	}
 	
 }

@@ -10,4 +10,9 @@
 		values(#{join_id}, #{join_pw1}, #{join_pw2}, #{join_name}, #{birth_year}, #{birth_month}, #{birth_day}, #{gender});
 	</insert>
 
+	<select id="login" resultType="com.invi.domain.MemberVO">
+		select * from invi_member
+		where join_id = #{join_id}
+		and join_pw1 = #{join_pw1};
+	</select>
 </mapper>
