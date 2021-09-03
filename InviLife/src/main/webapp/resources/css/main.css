@@ -644,7 +644,7 @@ legend {
     }
 
     .slick-dots li {
-        margin: 0 25px;
+        margin: 0 15px;
     }
 
     .slick-dots {
@@ -1019,16 +1019,16 @@ legend {
     }
 
     .slick-dots li {
-        margin: 0 30px;
+        margin: 0 20px;
     }
 
     .slick-dots {
         position: absolute;
-        bottom: 80px;
+        bottom: 60px;
     }
 
     .slick-dots li button:before {
-        font-size: 20px;
+        font-size: 18px;
     }  
 
 
