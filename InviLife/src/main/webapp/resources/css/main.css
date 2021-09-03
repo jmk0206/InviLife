@@ -1346,12 +1346,12 @@ legend {
     overflow-y: scroll; /* 스크롤을 사용할 수 있게 한다. */
 }
 
-.s_login {
+.s_login, .s_user {
     height: 64px;
     background-color: #503c33;
 }
 
-.s_login a {
+.s_login a, .s_user a {
     display: block;
     padding-left: 45px;
     color: #fff;
@@ -1361,6 +1361,12 @@ legend {
     background-repeat: no-repeat;
     background-size: 20px auto;
     background-position: 15px center;
+}
+
+.s_user a {
+	background-image: url(../img/user.png);
+	    background-size: 30px auto;
+	    padding-left: 60px;
 }
 
 .s_gnb .d1 {
@@ -1416,3 +1422,24 @@ legend {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.s_logout {
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.s_logout a {
+    display: block;
+    padding: 10px 30px;
+    background: #98651e;
+    font-size: 16px;
+    color: #fff;
+}
+
+
+
+
+
+

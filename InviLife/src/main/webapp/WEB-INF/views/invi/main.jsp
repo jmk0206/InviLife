@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -78,8 +79,26 @@
 
                     <div class="pc_util pc">
                         <ul class="pc_topBar">
+                        <!-- 
                             <li><a href="login">로그인</a></li>
+                            <li>id: ${login.join_id }</li>
+                            <li>pw: ${login.join_pw1 }</li>
                             <li><a href="membership">회원가입</a></li>
+                         -->
+                         
+                         <c:catch>
+                         	<c:choose>
+                         		<c:when test="${empty login }">
+                         			<li><a href="login">로그인</a></li>
+                         			<li><a href="membership">회원가입</a></li>
+                         		</c:when>
+                         		<c:otherwise>
+                         			<li><a href="#">${login.join_id}님</a></li>
+                         			<li><a href="logout">로그아웃</a></li>
+                         		</c:otherwise>
+                        	</c:choose>
+                         </c:catch>
+                          
                             <li><a href="#">고객센터</a></li>
                         </ul>
 
@@ -206,10 +225,20 @@
     <!-- side -->
 
     <div id="side">
-        <div class="s_login">
-            <a href="login">로그인</a>
-        </div> <!--.s_login-->
-
+        <c:catch>
+          	<c:choose>
+          		<c:when test="${empty login }">
+          		<div class="s_login">
+          			<a href="login">로그인</a>
+          		</div> <!--.s_login-->
+         		</c:when>
+         		<c:otherwise>
+          		<div class="s_user">
+          			<a href="#">${login.join_id}님</a>
+          		</div> <!--.s_user-->
+         		</c:otherwise>
+      	    </c:choose>
+        </c:catch>
         <nav class="s_gnb">
             <ul>
                 <li class="d1">
@@ -274,6 +303,18 @@
         </nav> <!--.s_gnb-->
 
         <div class="s_close"><a href="#">사이드 닫기</a></div> <!--s_close-->
+        
+        <div class="s_logout">
+	     	<c:catch>
+	          	<c:choose>
+	          		<c:when test="${empty login }">
+	         		</c:when>
+	         		<c:otherwise>
+	          			<a href="logout">로그아웃</a>
+	         		</c:otherwise>
+	      	    </c:choose>
+	        </c:catch>
+        </div>
     </div> <!--#side-->
 
     <script src="../resources/slick-1.8.1/slick/slick.js"></script>

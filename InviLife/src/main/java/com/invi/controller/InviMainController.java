@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.invi.domain.MemberVO;
 import com.invi.service.MemberService;
@@ -51,7 +52,7 @@ public class InviMainController {
 	
 	// 로그인 Post
 	@PostMapping("login")
-	public String loginPost(MemberVO member, HttpSession session) {
+	public String loginPost(MemberVO member, HttpSession session, RedirectAttributes rttr) {
 		logger.info("로그인 서비스 처리");
 		
 		MemberVO vo = mService.login(member);
@@ -62,14 +63,16 @@ public class InviMainController {
 		if(session.getAttribute("login") != null) {
 			return "redirect:/invi/main";
 		} else {
+			rttr.addFlashAttribute("msg", false);
 			return "redirect:/invi/login";
 		}
 	}
 	
-	@PostMapping("logout")
-	public void logoutPost(HttpSession session) {
+	@GetMapping("logout")
+	public String logoutPost(HttpSession session) {
 		logger.info("로그아웃 처리");
-		session.removeAttribute("login");
+		session.invalidate();
+		return "redirect:/invi/main";
 	}
 	
 }

@@ -10,7 +10,5 @@
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
-id : ${aaaa.join_id }
-pw : ${aaaa.join_pw1 }
 </body>
 </html>

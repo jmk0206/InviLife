@@ -125,8 +125,16 @@ input[type="text"], input[type="password"] {
     margin-bottom: 10px;
 }
 
-#user_pw {
-    margin-bottom: 20px;
+.loginPw {
+    margin-bottom: 15px;
+}
+
+.loginError {
+	display: flex;
+	justify-content: flex-start;
+	margin-left: 5px;
+	padding-top: 10px;
+	color: #ff0000;
 }
 
 #user_login .user_select {
@@ -181,8 +189,6 @@ input[type="text"], input[type="password"] {
 }
 
 
-
-
 /* 모바일 끝 */
 
 
@@ -215,6 +221,14 @@ input[type="text"], input[type="password"] {
         height: 60px;
         margin-bottom: 30px;
     }
+    
+    .loginError {
+		display: flex;
+		justify-content: flex-start;
+		margin-left: 17%;
+		padding-top: 10px;
+		color: #ff0000;
+	}
 
    
 }

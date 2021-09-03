@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,10 +38,13 @@
                             <input type="text" id="user_id" class="lg_select" name="join_id" placeholder="아이디" required autofocus>
                         </li>
 
-                        <li>
+                        <li class="loginPw">
                             <input type="password" id="user_pw" class="lg_select" name="join_pw1" placeholder="비밀번호" required>
+                		<c:if test="${msg == false }">
+							<p class="loginError">* 로그인에 실패하였습니다. 아이디 또는 비밀번호를 다시 입력해주십시오.</p>
+						</c:if>
                         </li>
-
+                        
                         <li>
                             <input type="submit" value="로그인" id="login_button">
                         </li>
