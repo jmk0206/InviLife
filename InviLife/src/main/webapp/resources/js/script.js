@@ -2,7 +2,6 @@ $(function() {
     
     // all_menu를 클릭할 때
     $('.all_menu').click(function(){ 
-
         $('#side').animate({right : '0%'}, 1000);
         // fixed로 만들어서 스크롤 바가 없어지도록 한다.
         $('#wrap').css({position : 'fixed'});
@@ -90,4 +89,18 @@ $(document).ready(function() {
             $(this).css('display', 'none');
         });
     });
+    
+    
+    // 가게 검색 focus 시 배경 색상 변경
+    $('.search_text').on('focus', function() {
+    	$('.search, .search_btn').css('background-color', '#fff');
+    	$('.search').css('border', '1px solid #bbb');
+    }).blur(function() {
+    	$('.search, .search_btn').css('background-color', '#eee');
+    	$('.search').css('border', 'none');
+    })
+    
+    
 });
+
+

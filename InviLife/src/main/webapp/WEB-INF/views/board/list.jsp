@@ -19,48 +19,52 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-	<table class="table table-bordered" id="dataTable">
-		<thead>
-			<tr>
-				<td>번호</td>
-				<td>제목</td>
-				<td>작성자</td>
-				<td>작성일자</td>
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach items="${list}" var="board">
+	<div id="wrap">
+		<div id="container">
+			<table class="table table-bordered" id="dataTable">
+				<thead>
+					<tr>
+						<td>번호</td>
+						<td>제목</td>
+						<td>작성자</td>
+						<td>작성일자</td>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach items="${list}" var="board">
+						<tr>
+							<td>${board.bno }</td>
+							<td><a href="get?bno=${board.bno }">${board.title }[ ${board.replycnt } ]</a></td>
+							<td>${board.writer }</td>
+							<td>${board.regdate }</td>
+						</tr>
+					</c:forEach>
+				</tbody>
 				<tr>
-					<td>${board.bno }</td>
-					<td><a href="get?bno=${board.bno }">${board.title }[ ${board.replycnt } ]</a></td>
-					<td>${board.writer }</td>
-					<td>${board.regdate }</td>
+					<td colspan="4">
+						<button type="button" onClick="location.href='register'">글쓰기</button>
+					</td>
 				</tr>
-			</c:forEach>
-		</tbody>
-		<tr>
-			<td colspan="4">
-				<button type="button" onClick="location.href='register'">글쓰기</button>
-			</td>
-		</tr>
-	</table>
-
-	<div>
-		<form action="list" method="get">
-			<!-- 페이징이 깨지기 때문에 아래의 input태그를 사용하며 hidden을 한다. -->
-			<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum}">
-			<input type="hidden" name=amount value="${pageMaker.cri.amount}">
-			<select name="type">
-				<option value="">--</option>
-				<option value="TC">제목 or 내용</option>
-				<option value="TW">제목 or 작성자</option>
-				<option value="CW">내용 or 작성자</option>
-				<option value="TCW">제목 or 내용 or 작성자</option>
-			</select>
-			<input type="text" name="keyword">
-			<input type="submit" value="검색">
-		</form>
-	</div>
+			</table>
+		
+			<div>
+				<form action="list" method="get">
+					<!-- 페이징이 깨지기 때문에 아래의 input태그를 사용하며 hidden을 한다. -->
+					<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum}">
+					<input type="hidden" name=amount value="${pageMaker.cri.amount}">
+					<select name="type">
+						<option value="">--</option>
+						<option value="TC">제목 or 내용</option>
+						<option value="TW">제목 or 작성자</option>
+						<option value="CW">내용 or 작성자</option>
+						<option value="TCW">제목 or 내용 or 작성자</option>
+					</select>
+					<input type="text" name="keyword">
+					<input type="submit" value="검색">
+				</form>
+			</div>
+		</div> <!-- #container -->
+	</div> <!-- #wrap -->
 
 	    <!-- Bootstrap core JavaScript-->
     <script src="../resources/js/jquery.js"></script>

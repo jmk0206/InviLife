@@ -68,7 +68,7 @@ $(document).ready(function() {
 		)
 	})
 	
-})
+});
 
 
 var replyService = (function() {
@@ -93,17 +93,18 @@ var replyService = (function() {
 			}
 		})
 	} // add 함수 끝
-		function getList(param,callback,error) { // getList함수 시작(댓글 목록 리스트)
-		var bno = param.bno;
-		$.getJSON("/replies/page/"+bno+".json",
-				function(date) {
-					if(callback) {
-						callback(date);
-					}
-			}).fail(function(xhr,status,err) {// getList함수 시작(댓글 목록 리스트)
-				if(error) {
-					error(er);
+	
+	function getList(param,callback,error) { // getList함수 시작(댓글 목록 리스트)
+	var bno = param.bno;
+	$.getJSON("/replies/page/"+bno+".json",
+			function(date) {
+				if(callback) {
+					callback(date);
 				}
+		}).fail(function(xhr,status,err) {// getList함수 시작(댓글 목록 리스트)
+			if(error) {
+				error(er);
+			}
 		});
 	}// getList함수 끝
 		

@@ -319,6 +319,8 @@ legend {
     background-size: 20px auto;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .search_logo {
