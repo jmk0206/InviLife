@@ -21,6 +21,7 @@
 </head>
 <body>
 	<div id="wrap">
+		<%@ include file="../invi/header.jsp" %>
 		<div id="container">
 			<table class="table table-bordered" id="dataTable">
 				<thead>

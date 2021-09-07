@@ -110,6 +110,7 @@
                 </div> <!--.header_content-->
             </div> <!--.headerIn-->
         </header> <!--.#header-->
+        
         <div class="container">
             <div class="coffee_info">
                 <div class="coffee_img">

@@ -75,4 +75,8 @@ public class InviMainController {
 		return "redirect:/invi/main";
 	}
 	
+	@GetMapping("header")
+	public void header() {
+		logger.info("header");
+	}
 }
