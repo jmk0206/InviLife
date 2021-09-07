@@ -8,9 +8,10 @@
 	<link href="../resources/css/all.css" rel="stylesheet" type="text/css">	
 	<!-- Custom styles for this template -->
 	<link href="../resources/css/sb-admin-2.css" rel="stylesheet">
-	
 	<!-- Custom styles for this page -->
 	<link href="../resources/css/dataTables.bootstrap4.css" rel="stylesheet">
+	<!-- list.css -->
+	<link href="../../resources/css/list.css" rel="stylesheet">
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,13 +42,13 @@
 					</c:forEach>
 				</tbody>
 				<tr>
-					<td colspan="4">
+					<td colspan="4" class="registerBtn">
 						<button type="button" onClick="location.href='register'">글쓰기</button>
 					</td>
 				</tr>
 			</table>
 		
-			<div>
+			<div class="search">
 				<form action="list" method="get">
 					<!-- 페이징이 깨지기 때문에 아래의 input태그를 사용하며 hidden을 한다. -->
 					<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum}">
