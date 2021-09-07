@@ -21,11 +21,11 @@
         <header id="header">
             <div class="headerIn">
                 <div class="header_content">
-                    <h1 class="main_logo mo"><a href="#">로고</a></h1>
-                    <div class="main_title"><a href="#">INVILIFE COFFEE</a></div> <!--.mainTitle-->
+                    <h1 class="main_logo mo"><a href="/invi/main">로고</a></h1>
+                    <div class="main_title"><a href="/invi/main">INVILIFE COFFEE</a></div> <!--.mainTitle-->
 
                     <div class="all_menu mo">
-                        <a href="">
+                        <a href="#">
                             <span>전체메뉴 열기</span>
                         </a>
                     </div> <!--.mo_menu-->
@@ -78,14 +78,7 @@
                     </nav> <!--.pc_gnb-->
 
                     <div class="pc_util pc">
-                        <ul class="pc_topBar">
-                        <!-- 
-                            <li><a href="login">로그인</a></li>
-                            <li>id: ${login.join_id }</li>
-                            <li>pw: ${login.join_pw1 }</li>
-                            <li><a href="membership">회원가입</a></li>
-                         -->
-                         
+                        <ul class="pc_topBar">                         
                          <c:catch>
                          	<c:choose>
                          		<c:when test="${empty login }">
@@ -272,7 +265,7 @@
                             <li><a href="#">가입</a></li>
                             <li><a href="#">멤버십 혜택</a></li>
                             <li><a href="#">선물하기</a></li>
-                            <li><a href="#">FAQ</a></li>
+                            <li><a href="/board/list">FAQ</a></li>
                         </ul>
                     </div> <!--.sub-->
                 </li> <!--3번메뉴-->

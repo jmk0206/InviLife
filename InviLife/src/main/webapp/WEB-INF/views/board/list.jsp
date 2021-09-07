@@ -1,28 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!DOCTYPE html>
-<html>
-<head>
-	<!-- Custom fonts for this template -->
-	<link href="../resources/css/all.css" rel="stylesheet" type="text/css">	
-	<!-- Custom styles for this template -->
-	<link href="../resources/css/sb-admin-2.css" rel="stylesheet">
-	<!-- Custom styles for this page -->
-	<link href="../resources/css/dataTables.bootstrap4.css" rel="stylesheet">
-	<!-- list.css -->
-	<link href="../../resources/css/list.css" rel="stylesheet">
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>List</title>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
-	<div id="wrap">
+
 		<%@ include file="../invi/header.jsp" %>
 		<div id="container">
+			<h2 class="boardFAQ">
+				FAQ<br>
+				<span class="titleFAQ">언제나 고객의 목소리에 귀를 기울이겠습니다.</span>
+			</h2>
 			<table class="table table-bordered" id="dataTable">
 				<thead>
 					<tr>
@@ -66,23 +50,4 @@
 				</form>
 			</div>
 		</div> <!-- #container -->
-	</div> <!-- #wrap -->
-
-	    <!-- Bootstrap core JavaScript-->
-    <script src="../resources/js/jquery.js"></script>
-    <script src="../resources/js/bootstrap.bundle.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="../resources/js/jquery.easing.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="../resources/js/sb-admin-2.js"></script>
-
-    <!-- Page level plugins -->
-    <script src="../resources/js/jquery.dataTables.js"></script>
-    <script src="../resources/js/dataTables.bootstrap4.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="../resources/js/datatables-demo.js"></script>
-</body>
-</html>
+		<%@ include file="../invi/footer.jsp" %>

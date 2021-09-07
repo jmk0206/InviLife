@@ -4,6 +4,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- Custom fonts for this template -->
+	<link href="../resources/css/all.css" rel="stylesheet" type="text/css">	
+	<!-- Custom styles for this template -->
+	<link href="../resources/css/sb-admin-2.css" rel="stylesheet">
+	<!-- Custom styles for this page -->
+	<link href="../resources/css/dataTables.bootstrap4.css" rel="stylesheet">
+	<!-- list.css -->
+	<link href="../../resources/css/list.css" rel="stylesheet">
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,11 +25,12 @@
 <link rel="stylesheet" href="../resources/css/main.css">
 </head>
 <body>
+	<div id="wrap">
 	<header id="header">
          <div class="headerIn">
              <div class="header_content">
                  <h1 class="main_logo mo"><a href="#">로고</a></h1>
-                 <div class="main_title"><a href="#">INVILIFE COFFEE</a></div> <!--.mainTitle-->
+                 <div class="main_title"><a href="/invi/main">INVILIFE COFFEE</a></div> <!--.mainTitle-->
 
                  <div class="all_menu mo">
                      <a href="">
@@ -78,22 +87,15 @@
 
                  <div class="pc_util pc">
                      <ul class="pc_topBar">
-                     <!-- 
-                         <li><a href="login">로그인</a></li>
-                         <li>id: ${login.join_id }</li>
-                         <li>pw: ${login.join_pw1 }</li>
-                         <li><a href="membership">회원가입</a></li>
-                      -->
-                      
                       <c:catch>
                       	<c:choose>
                       		<c:when test="${empty login }">
-                      			<li><a href="login">로그인</a></li>
-                      			<li><a href="membership">회원가입</a></li>
+                      			<li><a href="/invi/login">로그인</a></li>
+                      			<li><a href="/invi/membership">회원가입</a></li>
                       		</c:when>
                       		<c:otherwise>
                       			<li><a href="#">${login.join_id}님</a></li>
-                      			<li><a href="logout">로그아웃</a></li>
+                      			<li><a href="/invi/logout">로그아웃</a></li>
                       		</c:otherwise>
                      	</c:choose>
                       </c:catch>
@@ -203,7 +205,6 @@
 	        </c:catch>
         </div>
     </div> <!--#side-->
-    <script src="../resources/slick-1.8.1/slick/slick.js"></script>
-    <script src="../resources/js/script.js"></script>
+
 </body>
 </html>
