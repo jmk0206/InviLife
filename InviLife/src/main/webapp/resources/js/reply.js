@@ -41,6 +41,7 @@ $(document).ready(function() {
 				}
 		);
 	});
+	
 	// 수정 버튼을 클릭하면,
 	$("#replyList").on("click", ".replymod", function(e) {
 		var rno = $(this).data("rno");
@@ -94,14 +95,14 @@ var replyService = (function() {
 		})
 	} // add 함수 끝
 	
-	function getList(param,callback,error) { // getList함수 시작(댓글 목록 리스트)
+	function getList(param, callback, error) { // getList함수 시작(댓글 목록 리스트)
 	var bno = param.bno;
 	$.getJSON("/replies/page/"+bno+".json",
 			function(date) {
 				if(callback) {
 					callback(date);
 				}
-		}).fail(function(xhr,status,err) {// getList함수 시작(댓글 목록 리스트)
+		}).fail(function(xhr, status, err) {// getList함수 시작(댓글 목록 리스트)
 			if(error) {
 				error(er);
 			}
